@@ -12,7 +12,7 @@ import (
 	"github.com/markbates/goth/providers/github"
 	"github.com/markbates/goth/providers/gitlab"
 
-	"./dotenv"
+	"github.com/seita-uc/netlify-cms-oauth-provider-go/pkg/dotenv"
 )
 
 var (
@@ -94,14 +94,14 @@ func handleCallbackProvider(res http.ResponseWriter, req *http.Request) {
 
 // GET /refresh
 func handleRefresh(res http.ResponseWriter, req *http.Request) {
-	fmt.Printf("refresh with '%s'\n", req)
-	res.Write([]byte(""))
+	//fmt.Printf("refresh with '%s'\n", req)
+	res.Write([]byte("ok"))
 }
 
 // GET /success
 func handleSuccess(res http.ResponseWriter, req *http.Request) {
-	fmt.Printf("success with '%s'\n", req)
-	res.Write([]byte(""))
+	//fmt.Printf("success with '%s'\n", req)
+	res.Write([]byte("ok"))
 }
 
 func init() {
